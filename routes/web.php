@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 // System.out.println
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend');
 });
 
 Route::get('halo', function () {
@@ -14,4 +14,21 @@ Route::get('halo', function () {
 
 Route::get('blog', function () {
 	return view('blog');
+});
+Route::get('linktree', function () {
+	return view('linktree');
+});
+Route::get('ETS', function () {
+	return view('ETS');
+});
+Route::get('latihancalculator', function () {
+	return view('latihancalculator');
+
+});Route::get('pertemuan4', function () {
+	return view('pertemuan4');
+
+});
+
+Route::get('validasi1', function () {
+	return view('validasi1');
 });
