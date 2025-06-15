@@ -5,6 +5,8 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\KaryawanDBController;
+use App\Http\Controllers\PageCounterController;
+
 
 
 // Halaman utama
@@ -57,3 +59,4 @@ Route::get('/karyawan', [KaryawanDBController::class, 'index']);
 Route::get('/tambah/karyawan', [KaryawanDBController::class, 'tambah']);
 Route::post('/karyawan/store', [KaryawanDBController::class, 'store']); //jika form dikirim, route ini akan dijalankan
 Route::get('/karyawan/hapus/{id}', [KaryawanDBController::class, 'hapus']);
+Route::get('/pagecounter',[PageCounterController::class,'pageindex']);
