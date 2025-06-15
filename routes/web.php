@@ -8,7 +8,6 @@ use App\Http\Controllers\KaryawanDBController;
 use App\Http\Controllers\PageCounterController;
 
 
-
 // Halaman utama
 Route::get('/', function () {
     return view('frontend');
@@ -60,3 +59,12 @@ Route::get('/tambah/karyawan', [KaryawanDBController::class, 'tambah']);
 Route::post('/karyawan/store', [KaryawanDBController::class, 'store']); //jika form dikirim, route ini akan dijalankan
 Route::get('/karyawan/hapus/{id}', [KaryawanDBController::class, 'hapus']);
 Route::get('/pagecounter',[PageCounterController::class,'pageindex']);
+
+//route pensilDB
+use App\Http\Controllers\PensilDBController;
+Route::get('/pensil', [PensilDBController::class, 'index']);
+Route::get('/pensil/tambah', [PensilDBController::class, 'tambah']);
+Route::post('/pensil/store', [PensilDBController::class, 'store']); //jika form dikirim, route ini akan dijalankan
+Route::get('/pensil/edit/{id}',[PensilDBController::class, 'edit']);
+Route::post('/pensil/update',[PensilDBController::class, 'update']);
+Route::get('/pensil/hapus/{id}', [PensilDBController::class, 'hapus']);
