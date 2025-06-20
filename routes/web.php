@@ -6,7 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\KaryawanDBController;
 use App\Http\Controllers\PageCounterController;
-
+use App\Http\Controllers\NewKaryawanController;
 
 // Halaman utama
 Route::get('/', function () {
@@ -68,3 +68,11 @@ Route::post('/pensil/store', [PensilDBController::class, 'store']); //jika form 
 Route::get('/pensil/edit/{id}',[PensilDBController::class, 'edit']);
 Route::post('/pensil/update',[PensilDBController::class, 'update']);
 Route::get('/pensil/hapus/{id}', [PensilDBController::class, 'hapus']);
+
+//route NewKaryawan
+Route::get('/eas', [NewKaryawanController::class, 'index']);
+Route::get('/tambah/newkaryawan', [NewKaryawanController::class, 'tambah']);
+Route::post('/newkaryawan/store', [NewKaryawanController::class, 'store']); //jika form dikirim, route ini akan dijalankan
+Route::get('/newkaryawan/hapus/{id}', [NewKaryawanController::class, 'hapus']);
+
+
